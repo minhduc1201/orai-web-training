@@ -1,0 +1,8 @@
+-	Thiết lập tên và email vào file config git
+-	Cách tạo repository, các lệnh git cơ bản: git clone, git add, git commit, git push, git status
+-	Các trạng thái stagged, tracked, untracked của tập tin, cách chuyển tập tin từ trạng thái tracked về untracked ( rm )
+-	Xem git log, git tag , thêm git tag,..
+-	Đổi tên, thêm remote, git fetch
+-	Branch: khái niệm, cách tạo, đổi sang branch khác, gộp dữ liệu, xóa branch
+-	Thử tạo repository server
+
