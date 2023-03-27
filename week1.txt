@@ -5,4 +5,3 @@
 -	Đổi tên, thêm remote, git fetch
 -	Branch: khái niệm, cách tạo, đổi sang branch khác, gộp dữ liệu, xóa branch
 -	Thử tạo repository server
-
