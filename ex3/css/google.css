@@ -1,0 +1,178 @@
+div {
+    font-family:Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    }
+
+.navbar-1{
+    font-size: 15px;
+    background-color: #f2f2f2;
+    color: rgb(112, 117, 122);
+    padding-left: 30px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    cursor: text;
+}
+
+.navbar-2 {
+    font-size: 14px;
+    color: rgb(112, 117, 122);
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    align-items: center;
+    
+}
+
+.navbar-2-1 {
+    display: inline-flex;
+}
+
+.navbar-2-2 {
+    display: inline-flex;
+    margin-right: 30px;
+}
+
+.navbar-text {
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.navbar-text:hover{
+    text-decoration: underline;
+}
+
+.header_text:hover{
+    text-decoration: underline;
+}
+
+.header {
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 13px 0 17px 0;
+}
+
+.header_text{
+    margin-right: 17px;
+    font-size: 13px;
+}
+
+.avatar{
+    margin-right: 17px;
+    margin-left: 3px;
+}
+
+.apps{
+    margin: 0 17px;
+}
+
+.input_search{
+    width: 586px;
+    height: 39px;
+    border: 1px solid #DFE1E5;
+    border-radius: 25px;
+    caret-color: black;
+}
+
+.input_search:hover{
+    cursor: text;
+    box-shadow: 3px 3px 6px #e8e8e9;
+}
+
+.input_search:focus{
+    cursor: text;
+    box-shadow: 3px 3px 6px #e8e8e9;
+    border-color: #DFE1E5;
+}
+
+.searching {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 96px;
+}
+
+.search_bar {
+    padding-top: 24px;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+    padding-top: 30px;
+    font-family:arial, sans-serif;
+}
+
+.button-onclick{
+    border-style: hidden;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.button-onclick:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 4px #e8e8e9;
+    border-color: #DFE1E5;
+}
+
+.change-language {
+    font-size: 13px;
+    display: flex;
+    font-family: arial,sans-serif;
+    padding-top: 30px;
+    padding-bottom: 220px;
+}
+
+.language-list {
+    display: flex;
+}
+
+.language {
+    color: blue;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.language:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.search_icon {
+    background-image: url('/img/search.png');
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 39%;
+    left: 32%
+}
+
+.micro-icon{
+    width: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 38.5%;
+    left: 63.5%;
+}
+
+.camera {
+    background-image: url('/img/camera.png');
+    background-size: 27px 25px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top:38.5%;
+    right: 31.7%;
+
+}
