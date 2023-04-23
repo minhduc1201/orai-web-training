@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Coins</title>
+</head>
+<body>
+    <label for="coin-input">Input Coin</label>
+    <input type="text" id="coin-input" name="coin-input" placeholder="Coin Input" >
+    <input type="text" id="amount" name="amount" placeholder="Amount">
+    <label for="output-currency">Output Currency</label>
+    <input type="text" id="output-currency" name="output-currency" placeholder="Output Currency" >
+    <button id="exchange-btn">Exchange</button>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const exchangeButton = document.querySelector("#exchange-btn");
+        exchangeButton.addEventListener("click", async () => {
+            const inputCoinId = document.querySelector("#coin-input").value.toLowerCase();
+            const outputCurrency = document.querySelector("#output-currency").value.toLowerCase();
+            const amount = document.querySelector("#amount").value;
+            if (amount < 0) {
+                alert("Error: Amount must be greater than or equal to zero");
+                return;
+            }
+            try {
+                const supportedCurrenciesUrl = `https://api.coingecko.com/api/v3/simple/supported_vs_currencies`;
+                const supportedCurrenciesResponse = await axios.get(supportedCurrenciesUrl);
+                const supportedCurrencies = supportedCurrenciesResponse.data;
+                if (!supportedCurrencies.includes(outputCurrency)) {
+                    alert("Error: Output currency not supported");
+                    return;
+                }
+                const exchangeUrl = `https://api.coingecko.com/api/v3/simple/price?ids=${inputCoinId}&vs_currencies=${outputCurrency}`;
+                const exchangeResponse = await axios.get(exchangeUrl);
+                const exchangeRate = exchangeResponse.data[inputCoinId][outputCurrency];
+                const outputAmount = amount * exchangeRate;
+                alert(`${amount} ${inputCoinId} is worth ${outputAmount} ${outputCurrency}`);
+            } catch (error) {
+                console.error(error);
+                alert("An error occurred while getting exchange rate");
+            }
+        });
+    </script>
+</body>
+</html>
